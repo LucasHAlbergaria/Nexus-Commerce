@@ -20,9 +20,9 @@ public class Produtos {
     private String category;
 
     @Column(nullable = false)
-    private int stock;
+    private Integer stock;
 
-    public Produtos(Long id, String name, Double price, String category, int stock) {
+    public Produtos(Long id, String name, Double price, String category, Integer stock) {
         this.id = id;
         this.name = name;
         this.price = price;
