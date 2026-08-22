@@ -17,8 +17,12 @@ public class ProdutosMapper {
        );
     }
 
-    public Produtos updateProdutos(ProdutosRequestDTO produtosRequestDTO)
+    public Produtos updateProdutos(ProdutosRequestDTO produtosRequestDTO, Produtos produtos)
     {
-
+        produtos.setName(produtosRequestDTO.name());
+        produtos.setPrice(produtosRequestDTO.price());
+        produtos.setCategory(produtosRequestDTO.category());
+        produtos.setStock(produtosRequestDTO.stock());
+        return produtos;
     }
 }
