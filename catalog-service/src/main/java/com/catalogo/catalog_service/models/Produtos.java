@@ -1,5 +1,8 @@
 package com.catalogo.catalog_service.models;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+
 import java.util.Objects;
 
 @Entity
@@ -22,12 +25,14 @@ public class Produtos {
     @Column(nullable = false)
     private Integer stock;
 
-    public Produtos(Long id, String name, Double price, String category, Integer stock) {
-        this.id = id;
+    public Produtos( String name, Double price, String category, Integer stock) {
         this.name = name;
         this.price = price;
         this.category = category;
         this.stock = stock;
+    }
+
+    public Produtos() {
     }
 
     public Long getId() {
